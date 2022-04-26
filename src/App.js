@@ -5,12 +5,19 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-     <ul>
+      <div>
+        <h1>Технологии</h1>
+        <ul>
        <li>html</li>
        <li>css</li>
        <li>js</li>
        <li>react</li>
-     </ul>
+        </ul>
+      </div>
+         <h2>Инструменты</h2>
+         <li>Git</li>
+         <li>GitHub</li>
+         <li>NodeJs</li>
     </div>
   );
 }
