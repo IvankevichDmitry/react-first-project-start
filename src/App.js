@@ -1,7 +1,11 @@
+/* ПЕРВОНАЧАЛЬНЫЕ импорты ПРИ СКАЧИВАНИИ ПРИЛОЖЕНИЯ */ 
 // import logo from './logo.svg';
 import './App.css';
 
-// ******* (1) Array Function */
+// НОВЫЙ СПОСОБ ЧЕРЕЗ ФУНКЦИИ. 
+// СТРЕЛОЧНАЯ ФУНКЦИЯ
+
+// ******* (1) Array Function (НОВЫЙ СПОСОБ ЧЕРЕЗ СТРЕЛОЧНУЮ ФУНКЦИЮ) */
 // const App = () => {
 //   return (
 //     <div className="App">
@@ -26,6 +30,7 @@ import './App.css';
 Для понимания.
 import React from 'react';
 Мы берем JSX для нашей функции из библиотеки React из node_modules
+А у нас в новом React все это выполняеться в основном файле index.js.
 */
 
 import Header from './Header';
@@ -97,7 +102,7 @@ export default App;
 
 
 
-// ********************* 1 Это функция Function Declaration ********************
+// ********************* 1 Это функция Function Declaration (НОВЫЙ СПОСОБ) ********************
 // function App() {
 //   return (
 //     <div className="App">
@@ -120,7 +125,7 @@ export default App;
 // }
 
 
-//***************** 3 Это через Class и метод render */
+//***************** 3 Это через Class и метод render (СТАРЫЙ СПОСОБ для информации) */
 // Мы импортируем это из node_modules react.
 // import React, {Component} from 'react';
 

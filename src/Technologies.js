@@ -2,6 +2,7 @@
 Для понимания.
 import React from 'react';
 Мы берем JSX для нашей функции из библиотеки React из node_modules
+А у нас в новом React все это выполняеться в основном файле index.js.
 */
 
 const Technologies = () => {
