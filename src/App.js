@@ -29,13 +29,13 @@ import React from 'react';
 */
 
 import Header from './Header';
-import Technolgies from './Technologies';
+import Technologies from './Technologies';
 
                 const App = () => {
                   return (
                     <div>
                       <Header />
-                      <Technolgies />
+                      <Technologies />
                     </div>
                   )
                 }

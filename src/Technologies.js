@@ -4,7 +4,7 @@ import React from 'react';
 Мы берем JSX для нашей функции из библиотеки React из node_modules
 */
 
-const Technolgies = () => {
+const Technologies = () => {
     return (
         <div className="App">
             <div>
@@ -22,4 +22,4 @@ const Technolgies = () => {
     )
 }
 
-export default Technolgies;
+export default Technologies;
