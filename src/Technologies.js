@@ -1,0 +1,25 @@
+/*
+Для понимания.
+import React from 'react';
+Мы берем JSX для нашей функции из библиотеки React из node_modules
+*/
+
+const Technolgies = () => {
+    return (
+        <div className="App">
+            <div>
+                <h1>Технологии</h1>
+                <ul>
+                    <li>html, css, js</li>
+                    <li>react, redux</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Инструменты</h2>
+                <p>VScode, git, gitHub</p>
+            </div>
+        </div>
+    )
+}
+
+export default Technolgies;
