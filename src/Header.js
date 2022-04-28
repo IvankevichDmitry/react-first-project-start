@@ -1,3 +1,4 @@
+// КОМПОНЕНТ <HEADER />
 /*
 Для понимания.
 import React from 'react';

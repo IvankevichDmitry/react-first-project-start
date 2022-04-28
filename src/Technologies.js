@@ -1,3 +1,4 @@
+// КОМПОНЕНТ <Technologies />
 /*
 Для понимания.
 import React from 'react';
