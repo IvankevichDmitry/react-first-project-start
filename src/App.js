@@ -1,4 +1,7 @@
 import './App.css';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 
 
 //(1) Array Function (НОВЫЙ СПОСОБ) */
@@ -14,58 +17,11 @@ import React from 'react';
 const App = () => {
   return (
     <div className="app-wrapper">
-
-      <header className='header'>
-        <img src="https://www.vhv.rs/dpng/d/256-2567002_hello-png-free-download-transparent-background-hello-clip.png"></img>
-      </header>
-
-      <nav className='nav'>
-        <div>
-          <a>Profile</a>
-        </div>
-        <div>
-          <a>Messages</a>
-        </div>
-        <div>
-          <a>News</a>
-        </div>
-        <div>
-          <a>Music</a>
-        </div>
-        <div>
-          <a>Settings</a>
-        </div>
-      </nav>
-
-      <div className='content'>
-        <div>
-          <img src="https://t4.ftcdn.net/jpg/03/53/95/73/240_F_353957302_lzuGOuFVbkPMnfLCngcUco7EMS5OOxiz.jpg"></img>
-        </div>
-
-        <div className="logotip">
-          <img src="https://img.favpng.com/2/9/19/euclidean-vector-man-face-png-favpng-7dphNQdwDvHR1MKgvpEbrmJZh.jpg"></img>
-          avatar+description
-        </div>
-
-        <div>
-          My posts
-          <div>
-            New post
-          </div>
-          <div>
-            post 1
-          </div>
-          <div>
-            post 2
-          </div>
-        </div>
-
-        <div>
-        </div>
-
-      </div>
-
+      <Header />
+      <Navbar />
+      <Profile />
     </div>
+
   )
 }
 
