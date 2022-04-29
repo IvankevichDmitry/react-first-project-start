@@ -1,23 +1,29 @@
+import style from "./Navbar.module.css";
+// Можно посмотерть объект style
+// console.log(style);
+
+
 const Navbar = () => {
     return (
-        <nav className='nav'>
-            <div>
-                <a href="#s">Profile</a>
+        <nav className={style.nav}>
+            <div className={style.item}>
+                <a>Profile</a>
             </div>
-            <div>
-                <a href="#s">Messages</a>
+            <div className={`${style.item} ${style.active}`}>
+                <a>Messages</a>
             </div>
-            <div>
-                <a href="#s">News</a>
+            <div className={style.item}>
+                <a>News</a>
             </div>
-            <div>
-                <a href="#s">Music</a>
+            <div className={style.item}>
+                <a>Music</a>
             </div>
-            <div>
-                <a href="#s">Settings</a>
+            <div className={style.item}>
+                <a>Settings</a>
             </div>
         </nav>
     )
 }
+
 
 export default Navbar;
