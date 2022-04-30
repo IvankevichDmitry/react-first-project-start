@@ -1,8 +1,16 @@
 .item {
   color: greenyellow;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .item img {
     width: 30px;
     border-radius: 5x;
+}
+
+span {
+  border: 1px solid black;
+  color: yellow;
 }

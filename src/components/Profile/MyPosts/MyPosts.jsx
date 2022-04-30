@@ -16,7 +16,11 @@ return (
                 </div>
 
                 <div className={style.posts}>
-                    <Posts />
+                    <Posts message="Hello. It's my first commit" count="5"/>
+                    <Posts message="How are you?" count="10"/>
+                    <Posts message="Okey" count="15"/>
+                    <Posts message="Thank you!" count="20"/>
+                    <Posts message="Yes" count="100"/>
                 </div>
                 
             </div>

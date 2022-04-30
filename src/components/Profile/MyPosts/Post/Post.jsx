@@ -4,15 +4,21 @@ import style from "./Post.module.css";
 
 
 
-const Posts = () => {
+const Posts = (props) => {
+
+    // Просмотреть объект
+    // console.log(props);
+
     return (
         <div className={style.item}>
             <img src="https://img.favpng.com/2/9/19/euclidean-vector-man-face-png-favpng-7dphNQdwDvHR1MKgvpEbrmJZh.jpg"></img>
             
-            post 1
+            {props.message}
 
             <div>
-                <span>like</span>
+                <span>
+                    {props.count}
+                </span>
             </div>
 
         </div>
