@@ -8,16 +8,16 @@ import style from "./Profile.module.css";
 const Profile = () => {
     return (
         // Header Profile
-        <div className={style.content}>
+        <div>
             <div>
                 <img src="https://t4.ftcdn.net/jpg/03/53/95/73/240_F_353957302_lzuGOuFVbkPMnfLCngcUco7EMS5OOxiz.jpg"></img>
             </div>
 
-        {/* MyPosts */}
-        
+            {/* MyPosts */}
+
             <MyPosts />
 
-            
+
 
         </div>
     )
