@@ -7,12 +7,16 @@ import Posts from "./Post/Post";
 
 const MyPosts = () => {
 return (
-            <div>
-                My posts
+            <div className={style.postsBlock}>
+                <h3>My posts</h3>
 
-                <div>
+                <div className={style.postsForm}>
+                    <div>
                     <textarea></textarea>
+                    </div>
+                    <div>
                     <button>Add post</button>
+                    </div>
                 </div>
 
                 <div className={style.posts}>

@@ -1,7 +1,8 @@
 .nav {
     grid-area: n;
-    background-color: burlywood;
+    background-color: #36688D;
     padding: 30px;
+    border-top: 1px solid black;
     }
 
 .item{

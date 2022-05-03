@@ -1,0 +1,12 @@
+.postsBlock {
+    padding: 10px;
+}
+
+.postsForm {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.postsBlock h3 {
+    text-align: center;
+}

@@ -1,8 +1,10 @@
 .item {
-  color: greenyellow;
+  color: #F46A4E;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 50%;
+  padding: 10px;
 }
 
 .item img {
