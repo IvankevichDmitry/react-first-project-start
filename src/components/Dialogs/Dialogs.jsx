@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import style from "./Dialogs.module.css"
 
-// Вот наши 2 комоненты-функции DialogItem и Message
+// 2. Вот наши 2 комоненты-функции DialogItem и Message
 const DialogItem = (props) => {
     let path = "/dialogs/" + props.id;
 
@@ -20,7 +20,7 @@ const Message = (props) => {
 
 const Dialogs = (props) => {
     
-// Создали небольшую Базу Данных
+// 4. Создали небольшую Базу Данных
 let dialogsData = [
     { id: 1, name: "Dmitry" },
     { id: 2, name: "Alina" },
@@ -43,23 +43,22 @@ let messagesData = [
         <div className={style.dialogs}>
 
             <div className={style.dialogsItems}>
-                {/* Вот изначальное представление будущей компоненты
-                <div className={style.dialog + " " + style.active}>
-                    <NavLink to="/dialogs/1">Name</NavLink>
+                {/* 1. Вот изначальное представление будущей компоненты
+                <div className={style.dialog}>
+                    <NavLink to="/dialogs/1">Dmitry</NavLink>
                 </div> 
                 */}
+                
+                {/* 3. Вот использование компоненты DialogItem                
+                <DialogItem name="Dmitry" id="3" />
+
+                // 5. Вот использование Компоненты и данных
                 <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-                <DialogItem name="Timothy" id="3" />
-                <DialogItem name="Ekaterina" id="4" />
-                <DialogItem name="Maxim" id="5" />
-                <DialogItem name="Tanya" id="6" />
+                 */}
+
             </div>
 
             <div className={style.messages}>
-                {/* Вот изначальное представление будущей компоненты
-                <div className={style.message}>Hi</div>
-                */}
                 <Message message={messagesData[0].message} />
                 <Message message={messagesData[1].message} />
                 <Message message={messagesData[2].message} />
