@@ -7,7 +7,7 @@ import Posts from "./Post/Post";
 
 const MyPosts = () => {
 
-    // Суть  в Dialogs
+    // Данные с сообщениями. Суть в Dialogs
     let posts = [
         { id: 1, message: "Hi, how are you?", likesCount: 10 },
         { id: 2, message: "Post 1", likesCount: 30 },

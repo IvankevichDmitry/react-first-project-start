@@ -1,21 +1,10 @@
-import { NavLink } from "react-router-dom";
 import style from "./Dialogs.module.css"
 
 // 1. Вот наши 2 комоненты-функции DialogItem и Message
-const DialogItem = (props) => {
-    let path = "/dialogs/" + props.id;
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-    return (
-        <div className={style.dialog + " " + style.active}>
-            <NavLink to={path}>{props.name}</NavLink>
-        </div>
-    )
-};
-const Message = (props) => {
-    return (
-        <div className={style.message}>{props.message}</div>
-    )
-};
+
 
 
 const Dialogs = (props) => {
