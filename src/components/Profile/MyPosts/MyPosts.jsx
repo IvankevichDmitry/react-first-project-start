@@ -7,10 +7,16 @@ import Posts from "./Post/Post";
 
 const MyPosts = () => {
 
-    let postsData = [
+    // Суть  в Dialogs
+    let posts = [
         { id: 1, message: "Hi, how are you?", likesCount: 10 },
         { id: 2, message: "Post 1", likesCount: 30 },
+        { id: 3, message: "Post 2", likesCount: 100 },
+        { id: 5, message: "Post 3", likesCount: 110 },
     ];
+    let postsElements = posts.map( (item) => <Posts message={item.message} likesCount={item.likesCount} />)
+
+
 
     return (
         <div className={style.postsBlock}>
@@ -25,9 +31,8 @@ const MyPosts = () => {
                 </div>
             </div>
 
-            <div className={style.posts}>
-                <Posts message={postsData[0].message} likesCount={postsData[0].likesCount} />
-                <Posts message={postsData[1].message} likesCount={postsData[1].likesCount} />
+            <div className={style.posts}>      
+               {postsElements}
             </div>
 
         </div>
