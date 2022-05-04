@@ -6,25 +6,31 @@ import Posts from "./Post/Post";
 
 
 const MyPosts = () => {
-return (
-            <div className={style.postsBlock}>
-                <h3>My posts</h3>
 
-                <div className={style.postsForm}>
-                    <div>
+    let postsData = [
+        { id: 1, message: "Hi, how are you?", likesCount: 10 },
+        { id: 2, message: "Post 1", likesCount: 30 },
+    ];
+
+    return (
+        <div className={style.postsBlock}>
+            <h3>My posts</h3>
+
+            <div className={style.postsForm}>
+                <div>
                     <textarea></textarea>
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <button>Add post</button>
-                    </div>
                 </div>
-
-                <div className={style.posts}>
-                    <Posts message="Hello. It's my first commit" likesCount="5"/>
-                    <Posts message="How are you?" likesCount="10"/>
-                </div>
-                
             </div>
+
+            <div className={style.posts}>
+                <Posts message={postsData[0].message} likesCount={postsData[0].likesCount} />
+                <Posts message={postsData[1].message} likesCount={postsData[1].likesCount} />
+            </div>
+
+        </div>
     )
 }
 
