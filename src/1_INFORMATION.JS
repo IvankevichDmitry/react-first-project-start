@@ -5,20 +5,22 @@
 // ************************ ПРАКТИЧЕСКАЯ ЧАСТЬ. *************/
 // СОЗДАЕМ ПРИЛОЖЕНИЕ
 
-/* 17 Урок
+/* 18 Урок
    
 
-   App.js
+   index.js - данные Redux
 
-   Navbar.jsx
-   Profile.jsx
-        MyPosts.jsx
-           Post.jsx
-   Dialogs.jsx
-        DialogItem.jsx
-        Message.jsx
+   App.js - отрисовка React
+      Profile.jsx
+          MyPosts.jsx
+                Post.jsx
+          Dialogs.jsx
+                DialogItem.jsx
+                Message.jsx
 
-   17. Теперь мы разместим данные в index.js и будем через props их передавать во все наши другие компоненты.
+   18. Теперь мы разместим данные в index.js 
+       и передали данные через props во все наши другие компоненты, которые нарисовали все по данным.
+
        Это начальное представление React и Redux.
        
    */

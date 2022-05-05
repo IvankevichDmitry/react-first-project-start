@@ -9,35 +9,20 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-    // 2. БАЗА ДАННЫХ
-    // ПОЛЬЗОВАТЕЛЕЙ
-    let dialogs = [
-        { id: 1, name: "Dmitry" },
-        { id: 2, name: "Alina" },
-        { id: 3, name: "Timothy" },
-        { id: 4, name: "Eketerina" },
-        { id: 5, name: "Maxim" },
-        { id: 6, name: "Tanya" },
-    ];
-     // СООБЩЕНИЙ
-     let messages = [
-        { id: 1, message: "Hi" },
-        { id: 2, message: "Hello" },
-        { id: 3, message: "Good morning" },
-        { id: 4, message: "Good day" },
-        { id: 5, message: "Yes" },
-        { id: 6, message: "Welcome" },
-    ];
+    // Получаем данные из index.js в Dialogs.jsx через другие компоненты и их props.
+    let dialogsData = props.dialogsData;
+    let messagesData = props.messagesData;
+
 
     // 3. МЕТОД МАССИВОВ MAP 
     // *key - просто так, для React
-    let dialogsElements = dialogs.map((item) => <DialogItem name={item.name} id={item.id} key={item.id} /> );
+    let dialogsElements = dialogsData.map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);
     // Суть метода MAP
     // let dialogsElements = [
     //     <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />,
     //     <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />,
     // ]
-    let messagesElements = messages.map((item) => { return (<Message message={item.message} key={item.id} />)} );
+    let messagesElements = messagesData.map((item) => { return (<Message message={item.message} key={item.id} />) });
 
 
 
@@ -48,7 +33,7 @@ const Dialogs = (props) => {
                 {dialogsElements}
             </div>
 
-            <div className={style.messages}>        
+            <div className={style.messages}>
                 {/* // Использование НОВОГО МАССИВА СООБЩЕНИЙ */}
                 {messagesElements}
             </div>

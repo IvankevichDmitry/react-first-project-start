@@ -6,14 +6,14 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div>
             {/* // Header Profile */}
             <ProfileInfo />
 
             {/* // MyPosts */}
-            <MyPosts />
+            <MyPosts postsData={props.postsData}/>
         </div>
     )
 }
