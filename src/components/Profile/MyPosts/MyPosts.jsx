@@ -14,7 +14,7 @@ const MyPosts = () => {
         { id: 3, message: "Post 2", likesCount: 100 },
         { id: 5, message: "Post 3", likesCount: 110 },
     ];
-    let postsElements = posts.map( (item) => <Posts message={item.message} likesCount={item.likesCount} />)
+    let postsElements = posts.map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
 
 
 

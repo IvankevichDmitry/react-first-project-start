@@ -19,6 +19,8 @@ import React from 'react';
 А у нас в новом React все это выполняеться в основном файле index.js.
 */
 
+let SomeComponent = () => <Dialogs />
+
 const App = (props) => {
   return (
     <BrowserRouter>
