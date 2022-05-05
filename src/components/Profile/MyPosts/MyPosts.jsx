@@ -8,9 +8,9 @@ import Posts from "./Post/Post";
 const MyPosts = (props) => {
 
     // Получаем данные из index.js в MyPosts.jsx через другие компоненты и их props.
-    let postsData = props.postsData
+    // И создаем массив с компонетаой и данными.
 
-    let postsElements = postsData.map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
+    let postsElements = (props.posts).map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
 
     return (
         <div className={style.postsBlock}>

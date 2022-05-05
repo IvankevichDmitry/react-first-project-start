@@ -19,8 +19,6 @@ import React from 'react';
 А у нас в новом React все это выполняеться в основном файле index.js.
 */
 
-let SomeComponent = () => <Dialogs />
-
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -29,8 +27,8 @@ const App = (props) => {
         <Navbar />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/profile" element={<Profile postsData={props.postsData}/>} />
-            <Route path="/dialogs" element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>} />
+            <Route path="/profile" element={<Profile state={props.state.profilePage}/>} />
+            <Route path="/dialogs" element={<Dialogs state={props.state.dialogsPage}/>} />
             <Route path="/news" element={<News />} />
             <Route path="/music" element={<Music />} />
             <Route path="/settings" element={<Settings />} />
