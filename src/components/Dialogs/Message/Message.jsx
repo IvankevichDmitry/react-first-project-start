@@ -1,11 +1,14 @@
-import style from "./../Dialogs.module.css"
+import style from "./Message.module.css"
 
 // 1. Вот наши 2 комоненты-функции DialogItem и Message
 
 const Message = (props) => {
+
+    console.log(style.message)
+
     return (
         <div className={style.item}>
-           <img src="https://img.favpng.com/2/9/19/euclidean-vector-man-face-png-favpng-7dphNQdwDvHR1MKgvpEbrmJZh.jpg"></img>
+           <img src="https://e7.pngegg.com/pngimages/906/662/png-clipart-dot-dot.png"></img>
             <div className={style.message}>{props.message}</div>
         </div>
     )

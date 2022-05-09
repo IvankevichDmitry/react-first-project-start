@@ -1,5 +1,6 @@
 import style from "./MyPosts.module.css";
 import Posts from "./Post/Post";
+import React from "react";
 // Можно посмотерть объект style
 // console.log(style);
 
@@ -7,10 +8,17 @@ import Posts from "./Post/Post";
 
 const MyPosts = (props) => {
 
-    // Получаем данные из index.js в MyPosts.jsx через другие компоненты и их props.
-    // И создаем массив с компонетаой и данными.
-
     let postsElements = (props.posts).map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
+
+    // Ссылка на textarea c использование ref, через метод React createRef.
+    // Сслыка это объект, у которого current это textarea и value значние введеное в textarea.
+    // ref - используется для нативного или обычного JS. И в основном только для чтения информации.
+    let newPostElement = React.createRef()
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    };
+
 
     return (
         <div className={style.postsBlock}>
@@ -18,10 +26,10 @@ const MyPosts = (props) => {
 
             <div className={style.postsForm}>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={ addPost }>Add post</button>
                 </div>
             </div>
 

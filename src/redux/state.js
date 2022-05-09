@@ -13,12 +13,12 @@ let state = {
     //  2. Данные с пользователями и сообщениями пользователей. Используються в Dialogs.jsx
     dialogsPage: {
         dialogs: [
-            { id: 1, name: "Dmitry" },
-            { id: 2, name: "Alina" },
-            { id: 3, name: "Timothy" },
-            { id: 4, name: "Eketerina" },
-            { id: 5, name: "Maxim" },
-            { id: 6, name: "Tanya" },
+            { id: 1, name: "Dmitry", gender: "m" },
+            { id: 2, name: "Alina", gender: "w" },
+            { id: 3, name: "Timothy", gender: "m" },
+            { id: 4, name: "Eketerina", gender: "w" },
+            { id: 5, name: "Maxim", gender: "m" },
+            { id: 6, name: "Tanya", gender: "w" },
         ],
         messages: [
             { id: 1, message: "Hi" },

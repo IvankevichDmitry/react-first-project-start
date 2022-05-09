@@ -1,3 +1,4 @@
+import React from "react";
 import style from "./Dialogs.module.css"
 
 // 1. Вот наши 2 комоненты-функции DialogItem и Message
@@ -8,7 +9,6 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-
     // 3. МЕТОД МАССИВОВ MAP 
     // *key - просто так, для React
     let dialogsElements = (props.state.dialogs).map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);
@@ -19,6 +19,12 @@ const Dialogs = (props) => {
     // ]
     let messagesElements = (props.state.messages).map((item) => { return (<Message message={item.message} key={item.id} />) });
 
+
+    let newMessageElement = React.createRef()
+    let addMessage = () => {
+        let text = newMessageElement.current.value;
+        alert(text);
+    };
 
 
     return (
@@ -31,6 +37,19 @@ const Dialogs = (props) => {
             <div className={style.messages}>
                 {/* // Использование НОВОГО МАССИВА СООБЩЕНИЙ */}
                 {messagesElements}
+
+
+
+            <div className={style.postsForm}>
+                    <div>
+                        <textarea ref={newMessageElement}></textarea>
+                    </div>
+                    <div>
+                        <button onClick={addMessage}>Add message</button>
+                    </div>
+            </div>
+
+
             </div>
         </div>
     )

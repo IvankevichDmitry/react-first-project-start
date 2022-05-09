@@ -12,28 +12,12 @@
     border: 1px solid black;
 }
 
-.dialog {
-    text-decoration: none;
-    color: yellow;
-}
-
 .messages {
     margin: 10px;
     border: 1px solid black;
 }
 
-.message {
-    padding: 10px;
-    color: black;
-}
-
-.item {
-    color: #F46A4E;
-    font-size: 20px;
-    display: flex;
-    padding: 10px;
-  }
-
-.item img {
-width: 30px;
+.postsForm {
+    margin: 20px;
+    text-align: center;
 }

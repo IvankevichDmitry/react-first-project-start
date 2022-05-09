@@ -1,0 +1,17 @@
+.dialog {
+    padding: 5px;
+}
+
+.item {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.dialog img {
+    width: 10px;
+}
+
+.item:hover {
+    color: red;
+}
