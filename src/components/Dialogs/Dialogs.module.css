@@ -1,11 +1,15 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    margin: 10px;
+    border: 1px solid black;
 }
 
 .dialogsItems {
     padding: 10px;
     color: black;
+    margin: 10px;
+    border: 1px solid black;
 }
 
 .dialog {
@@ -14,9 +18,22 @@
 }
 
 .messages {
-    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
 }
 
 .message {
+    padding: 10px;
     color: black;
+}
+
+.item {
+    color: #F46A4E;
+    font-size: 20px;
+    display: flex;
+    padding: 10px;
+  }
+
+.item img {
+width: 30px;
 }

@@ -9,10 +9,6 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-    // Получаем данные из index.js в Dialogs.jsx через другие компоненты и их props.
-     // И создаем массив с компонетаой и данными.
-
-
     // 3. МЕТОД МАССИВОВ MAP 
     // *key - просто так, для React
     let dialogsElements = (props.state.dialogs).map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);

@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 // Импортируем данные приложения из файла state.js
 import state from './redux/state';
@@ -16,8 +17,10 @@ import state from './redux/state';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App posts={posts} dialogs={dialogs} messages={messages}/> */}
-    <App state={state} />
+    <BrowserRouter>
+        {/* <App posts={posts} dialogs={dialogs} messages={messages}/> */}
+        <App state={state} />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
