@@ -19,6 +19,7 @@ const MyPosts = (props) => {
     let addPostClick = () => {
         let text = newPostElement.current.value;
         props.addPost(text)
+        newPostElement.current.value = "";
     };
 
 

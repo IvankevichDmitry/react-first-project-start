@@ -1,5 +1,7 @@
 // БАЗА ДАННЫХ
 
+import { rerenderEntireTree } from "../render";
+
 let state = {
     // 1. Данные с сообщениями. Используються в MyPosts.jsx
     profilePage: {
@@ -39,6 +41,7 @@ export let addPost = (message) => {
          likesCount: 0
         };
     state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state)
 };
 
 
