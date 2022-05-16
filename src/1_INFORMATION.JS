@@ -5,26 +5,21 @@
 // ************************ ПРАКТИЧЕСКАЯ ЧАСТЬ. *************/
 // СОЗДАЕМ ПРИЛОЖЕНИЕ
 
-/* 21 Урок
+/* 22 Урок
    
+   state.js
+
+   index.js
+   App.jsx
+   Profile.jsx
    MyPosts.jsx
-   Dialogs.jsx
+     
+     В файле state.js создали функцию addPost, которая в базу данных state вносит новый объект с данными.
+     
+     Потом через props функцию addPost предали в index.js - App.jsx - Profile.jsx и в MyPosts.jsx. 
+     В MyPosts.jsx при нажатии на кнопку запускаеться функция addPostClick, 
+     которая запускает нашу функцию addPost с добавлениями данных из textarea в базу данных state в файле state.jsx.
 
-   1) 
-   Создали ссылку в textarea c использование ref, через метод React createRef получили в переменную ссылку let newPostElement.
-   Сслыка let newPostElement это объект, у которого current это елемент нативный textarea и value значние введеное в textarea.
-   Однако ref - используется для нативного или обычного JS. И в основном только для чтения информации.
+     Вот.
 
-   2) Познокомились с Dom и Virtual Dom.
-   Dom - нативный JS и в браузере отображает елементы.
-   VirtualDom - это от React.
-
-   Наш код взаимодейтсвует с ---> VirtualDOM взаимодейтсвует с ---> DOM.
-   Мы не можем использовать методы нативного JS document.getElementById и querySelector и другие методы, 
-   так как не знаем в какой момент времени браузер отрисует из VirtualDOM сам DOM, чтобы к нему обращаться.
-
-   3)
-   В следующих уроках нужно соеденить BLL (state.js) с UI click(MyPosts.jsx, Dialogs.jsx и другие файлы). 
-   Чтобы взаимодействовали данные state.js и MyPosts.jsx файлы. 
-   Вот так.
    */

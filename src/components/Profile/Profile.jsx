@@ -7,13 +7,15 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
 const Profile = (props) => {
+   
+
     return (
         <div>
             {/* // Header Profile */}
             <ProfileInfo />
 
             {/* // MyPosts */}
-            <MyPosts posts={props.state.posts}/>
+            <MyPosts posts={props.state.posts} addPost={props.addPost}/>
         </div>
     )
 }

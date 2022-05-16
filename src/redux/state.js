@@ -13,12 +13,12 @@ let state = {
     //  2. Данные с пользователями и сообщениями пользователей. Используються в Dialogs.jsx
     dialogsPage: {
         dialogs: [
-            { id: 1, name: "Dmitry", gender: "m" },
-            { id: 2, name: "Alina", gender: "w" },
-            { id: 3, name: "Timothy", gender: "m" },
-            { id: 4, name: "Eketerina", gender: "w" },
-            { id: 5, name: "Maxim", gender: "m" },
-            { id: 6, name: "Tanya", gender: "w" },
+            { id: 1, name: "Dmitry"},
+            { id: 2, name: "Alina" },
+            { id: 3, name: "Timothy" },
+            { id: 4, name: "Eketerina" },
+            { id: 5, name: "Maxim" },
+            { id: 6, name: "Tanya" },
         ],
         messages: [
             { id: 1, message: "Hi" },
@@ -30,5 +30,16 @@ let state = {
         ],
     }
 };
+
+// Функция для создания постов из страницы Profile
+export let addPost = (message) => {
+     let newPost = {
+         id: 5, 
+         message: message, 
+         likesCount: 0
+        };
+    state.profilePage.posts.push(newPost);
+};
+
 
 export default state;

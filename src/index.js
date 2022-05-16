@@ -13,13 +13,17 @@ import { BrowserRouter } from 'react-router-dom';
 // Импортируем данные приложения из файла state.js
 import state from './redux/state';
 
+// Импортируем функцию для постов
+import { addPost } from './redux/state';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
         {/* <App posts={posts} dialogs={dialogs} messages={messages}/> */}
-        <App state={state} />
+        <App state={state} addPost={addPost}/>
     </BrowserRouter>
   </React.StrictMode>
 );
