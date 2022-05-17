@@ -11,6 +11,7 @@ let state = {
             { id: 3, message: "Post 3", likesCount: 100 },
             { id: 4, message: "Post 4", likesCount: 110 },
         ],
+        newPostText: "Hello"
     },
     //  2. Данные с пользователями и сообщениями пользователей. Используються в Dialogs.jsx
     dialogsPage: {
@@ -26,23 +27,52 @@ let state = {
             { id: 1, message: "Hi" },
             { id: 2, message: "Hello" },
             { id: 3, message: "Good morning" },
-            { id: 4, message: "Good day" },
+            { id: 4, message: "Day" },
             { id: 5, message: "Yes" },
-            { id: 6, message: "Welcome" },
         ],
+        newMessage: "Message"
     }
 };
 
-// Функция для создания постов из страницы Profile
-export let addPost = (message) => {
+// 1 СТРАНИЦА POSTS.
+//ФУНКЦИИ ДЛЯ TEXTARE В STATE - INDEX - APP - PROFILE - MYPOSTS
+
+// 1. Функция для создания постов из страницы Profile
+export let addPost = () => {
      let newPost = {
          id: 5, 
-         message: message, 
+         message: state.profilePage.newPostText, 
          likesCount: 0
         };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = "";
     rerenderEntireTree(state)
 };
+
+// 2. Функция изменения текста на ввод сообщений в textarea
+export let updateNewPostText = (newText) => {
+   state.profilePage.newPostText = newText
+   rerenderEntireTree(state)
+};
+
+// 2 СТРАНИЦА DIALOGS. 
+//ФУНКЦИИ ДЛЯ TEXTARE В STATE - INDEX - APP - PROFILE - MYPOSTS
+
+export let addMessage = () => {
+    let newMessage = {
+        id: 6,
+        message: state.dialogsPage.newMessage,
+    };
+   state.dialogsPage.messages.push(newMessage);
+   state.dialogsPage.newMessage = "";
+   rerenderEntireTree(state)
+}
+
+export let updateNewMessageText = (newMessage) => {
+    state.dialogsPage.newMessage = newMessage
+    rerenderEntireTree(state)
+}
+
 
 
 export default state;

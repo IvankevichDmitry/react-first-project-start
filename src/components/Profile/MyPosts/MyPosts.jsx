@@ -7,8 +7,6 @@ import React from "react";
 
 
 const MyPosts = (props) => {
-
-
     let postsElements = (props.posts).map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
     
 
@@ -17,10 +15,13 @@ const MyPosts = (props) => {
     // ref - используется для нативного или обычного JS. И в основном только для чтения информации.
     let newPostElement = React.createRef()
     let addPostClick = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text)
-        newPostElement.current.value = "";
+        props.addPost();
     };
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+         props.updateNewPostText(text)
+    }
 
 
     return (
@@ -29,7 +30,8 @@ const MyPosts = (props) => {
 
             <div className={style.postsForm}>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement} 
+                    value={props.newPostText}/>
                 </div>
                 <div>
                     <button onClick={ addPostClick }>Add post</button>

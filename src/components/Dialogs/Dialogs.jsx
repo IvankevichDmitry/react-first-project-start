@@ -9,22 +9,21 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-    // 3. МЕТОД МАССИВОВ MAP 
-    // *key - просто так, для React
-    let dialogsElements = (props.state.dialogs).map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);
-    // Суть метода MAP
-    // let dialogsElements = [
-    //     <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />,
-    //     <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />,
-    // ]
-    let messagesElements = (props.state.messages).map((item) => { return (<Message message={item.message} key={item.id} />) });
+    
+    let dialogsElements = (props.dialogsPage.dialogs).map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);
+    let messagesElements = (props.dialogsPage.messages).map((item) => { return (<Message message={item.message} key={item.id} />) });
 
 
+    // Функция для ввода сообщений
     let newMessageElement = React.createRef()
     let addMessage = () => {
-        let text = newMessageElement.current.value;
-        alert(text);
+        props.addMessage();
     };
+
+    let onMessageChange = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessageText(text)
+    }
 
 
     return (
@@ -42,7 +41,7 @@ const Dialogs = (props) => {
 
             <div className={style.postsForm}>
                     <div>
-                        <textarea ref={newMessageElement}></textarea>
+                        <textarea onChange={onMessageChange} ref={newMessageElement} value={props.dialogsPage.newMessage}/>
                     </div>
                     <div>
                         <button onClick={addMessage}>Add message</button>
