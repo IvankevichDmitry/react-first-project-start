@@ -1,6 +1,8 @@
 // БАЗА ДАННЫХ
 
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () => {
+    console.log("State")
+}
 
 let state = {
     // 1. Данные с сообщениями. Используються в MyPosts.jsx
@@ -38,7 +40,7 @@ let state = {
 //ФУНКЦИИ ДЛЯ TEXTARE В STATE - INDEX - APP - PROFILE - MYPOSTS
 
 // 1. Функция для создания постов из страницы Profile
-export let addPost = () => {
+export const addPost = () => {
      let newPost = {
          id: 5, 
          message: state.profilePage.newPostText, 
@@ -50,7 +52,7 @@ export let addPost = () => {
 };
 
 // 2. Функция изменения текста на ввод сообщений в textarea
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
    state.profilePage.newPostText = newText
    rerenderEntireTree(state)
 };
@@ -58,7 +60,7 @@ export let updateNewPostText = (newText) => {
 // 2 СТРАНИЦА DIALOGS. 
 //ФУНКЦИИ ДЛЯ TEXTARE В STATE - INDEX - APP - PROFILE - MYPOSTS
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 6,
         message: state.dialogsPage.newMessage,
@@ -68,11 +70,15 @@ export let addMessage = () => {
    rerenderEntireTree(state)
 }
 
-export let updateNewMessageText = (newMessage) => {
+export const updateNewMessageText = (newMessage) => {
     state.dialogsPage.newMessage = newMessage
     rerenderEntireTree(state)
 }
 
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
 
 
 export default state;
