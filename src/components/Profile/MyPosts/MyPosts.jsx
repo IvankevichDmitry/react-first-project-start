@@ -7,7 +7,9 @@ import React from "react";
 
 
 const MyPosts = (props) => {
-    let postsElements = (props.posts).map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
+    console.log(props)
+   
+    let postsElements = (props.profilePage.posts).map( (item) => <Posts message={item.message} likesCount={item.likesCount} key={item.id} />)
     
 
     // Ссылка на textarea c использование ref, через метод React createRef.
@@ -15,12 +17,14 @@ const MyPosts = (props) => {
     // ref - используется для нативного или обычного JS. И в основном только для чтения информации.
     let newPostElement = React.createRef()
     let addPostClick = () => {
-        props.addPost();
+        props.dispatch({type: "ADD-POST"});
     };
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-         props.updateNewPostText(text)
+        let action = {type: "UPDATE-NEW-POST-TEXT", newText: text}
+        props.dispatch(action)
+        //  props.dispatch({type: "UPDATE-NEW-POST-TEXT", newText: text})
     }
 
 
@@ -31,7 +35,7 @@ const MyPosts = (props) => {
             <div className={style.postsForm}>
                 <div>
                     <textarea onChange={onPostChange} ref={newPostElement} 
-                    value={props.newPostText}/>
+                    value={props.profilePage.newPostText}/>
                 </div>
                 <div>
                     <button onClick={ addPostClick }>Add post</button>

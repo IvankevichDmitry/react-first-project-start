@@ -8,17 +8,14 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
 
-
     return (
         <div>
             {/* // Header Profile */}
             <ProfileInfo />
 
             {/* // MyPosts */}
-            <MyPosts posts={props.profilePage.posts}
-                newPostText={props.profilePage.newPostText}
-                updateNewPostText={props.updateNewPostText}
-                addPost={props.addPost} />
+            <MyPosts profilePage={props.profilePage}
+                dispatch={props.dispatch} />
         </div>
     )
 }

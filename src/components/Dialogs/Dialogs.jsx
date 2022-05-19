@@ -9,7 +9,6 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-    
     let dialogsElements = (props.dialogsPage.dialogs).map((item) => <DialogItem name={item.name} id={item.id} key={item.id} />);
     let messagesElements = (props.dialogsPage.messages).map((item) => { return (<Message message={item.message} key={item.id} />) });
 
@@ -17,12 +16,12 @@ const Dialogs = (props) => {
     // Функция для ввода сообщений
     let newMessageElement = React.createRef()
     let addMessage = () => {
-        props.addMessage();
+        props.dispatch({type: "ADD-MESSAGE"});
     };
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.updateNewMessageText(text)
+        props.dispatch({type: "UPDATE-NEW-MESSAGE-TEXT", newMessage: text})
     }
 
 
