@@ -10,10 +10,9 @@
     state.js
     index.js
 
-    В state.js создали функцию subscribe, которая вызывает как callback функцию rerenderEntireTree из index.js.
-    Удобный код.
+    Создали объект store в файле state.js.
+    Пометили все объекты, функции и переменные из файла state.js в объект store как свойства и методы объекта.
 
     Вот. 
-
 
 */

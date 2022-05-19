@@ -8,10 +8,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import state, { subscribe } from './redux/state';
+import store from './redux/state';
 
 // Импортируем функцию для постов и сообщений
-import { addMessage, addPost, updateNewMessageText, updateNewPostText } from './redux/state';
+// import state, { subscribe } from './redux/state';
+// import { addMessage, addPost, updateNewMessageText, updateNewPostText } from './redux/state';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,17 +21,15 @@ let rerenderEntireTree = (state) => {
     <React.StrictMode>
       <BrowserRouter>
           {/* <App posts={posts} dialogs={dialogs} messages={messages}/> */}
-          <App state={state} addPost={addPost} addMessage={addMessage} updateNewPostText={updateNewPostText} updateNewMessageText={updateNewMessageText}/>
+          <App state={state} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)} updateNewMessageText={store.updateNewMessageText.bind(store)}/>
       </BrowserRouter>
     </React.StrictMode>
   );
 };
 
+rerenderEntireTree(store.getState())
 
-
-rerenderEntireTree(state)
-
-subscribe(rerenderEntireTree)
+store.subscribe(rerenderEntireTree)
 
 
 
