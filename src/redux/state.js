@@ -7,11 +7,11 @@ let store = {
         profilePage: {
             posts: [
                 { id: 1, message: "Hi, how are you?", likesCount: 10 },
-                { id: 2, message: "Post 2", likesCount: 30 },
-                { id: 3, message: "Post 3", likesCount: 100 },
-                { id: 4, message: "Post 4", likesCount: 110 },
+                { id: 2, message: "Hello, everyone!", likesCount: 20 },
+                { id: 3, message: "Welcome to website", likesCount: 30 },
+                { id: 4, message: "Day!", likesCount: 30 },
             ],
-            newPostText: "Hello"
+            newPostText: "Enter your comment"
         },
         //  2. Данные с пользователями и сообщениями пользователей. Используються в Dialogs.jsx
         dialogsPage: {
@@ -30,7 +30,7 @@ let store = {
                 { id: 4, message: "Day" },
                 { id: 5, message: "Yes" },
             ],
-            newMessage: "Message"
+            newMessage: "Enter your message"
         }
     },
     _callSubscriber() {

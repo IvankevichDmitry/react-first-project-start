@@ -12,7 +12,8 @@ const ProfileInfo = () => {
             </div>
 
             <div className={style.descriptionBlock}>
-                ФОТО И ОПИСАНИЕ
+                <h1 className={style.h1}>The React project is educational for understanding <br></br>the principles of React and Redux.</h1>
+                <p className={style.p}>The combination and interaction of React and Redux on the example of simple and kind messages :)</p>
             </div>
 
         </div>

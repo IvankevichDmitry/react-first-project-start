@@ -30,8 +30,9 @@ const MyPosts = (props) => {
 
     return (
         <div className={style.postsBlock}>
-            <h3>My posts</h3>
+            <h3 className={style.h3}>My posts</h3>
 
+        <div className={style.postcenter}>
             <div className={style.postsForm}>
                 <div>
                     <textarea onChange={onPostChange} ref={newPostElement} 
@@ -45,7 +46,7 @@ const MyPosts = (props) => {
             <div className={style.posts}>      
                {postsElements}
             </div>
-
+      </div>
         </div>
     )
 }

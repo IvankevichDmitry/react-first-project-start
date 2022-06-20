@@ -1,12 +1,28 @@
 .postsBlock {
     padding: 10px;
+    border-top: 10px solid rgb(14, 122, 122);
+
+}
+
+h3 { 
+    color: rgb(7, 17, 213);
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(14, 122, 122);
 }
 
 .postsForm {
-    border: 1px solid black;
+    text-align: center;
+    border-radius: 20% ;
     padding: 10px;
+    width: 50%;
+    border-bottom: 3px solid rgb(14, 122, 122);
 }
 
-.postsBlock h3 {
-    text-align: center;
+.postcenter {
+margin-left: 25%;
+margin-right: 10%;
+width: 80%;
 }
